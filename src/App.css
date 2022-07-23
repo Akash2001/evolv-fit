@@ -1,38 +1,312 @@
 .App {
+  background: #1F2731;
+  padding: 50px 3% 80px;
+  /**font-family: Montserrat;**/
+}
+
+.App text {
+  font-size: .8em;
+  color: #BDBCBE;
+}
+
+/****************************** Main container **********************************/
+.container {
+  background: #101317;
+  box-shadow: 2px 3px 42px rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  color: #ffffff;
+  padding: 0px 2% 100px;
+}
+
+.container_menu {
+  display: flex;
+  padding: 22px 2%;
+}
+
+.container_menu svg {
+  padding: 0px 10px 0px 3px;
+  font-size: 1.3em;
+}
+
+.container_menu div {
+  width: 20%;
+  align-items: center;
+  font-size: 1.5rem;
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+}
+
+.container_menu_leftMargin {
+  margin-left: 30%;
+}
+
+/******************************** User row ******************************************/
+.userRow {
+  display: flex;
+  background: #1E262F;
+  max-height: 100px;
+  overflow: hidden;
+  padding: 0px 2%;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.userRow>div {
+  width: 20%;
+  display: flex;
+}
+
+.userRow .userRow_last {
+  width: 10%;
+}
+
+.userRow .userRow_profile {
+  width: 30%;
+  align-self: center;
+  display: flex;
+}
+
+.userRow_profile>div {
+  vertical-align: middle;
+  padding-right: 5%;
+  height: 60px;
+}
+
+#flex {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0px;
+  height: fit-content;
+}
+
+.userRow_profile img {
+  height: 60px;
+  width: 60px;
+}
+
+.userRow_steps,
+.userRow_nutrition,
+.userRow_last,
+.userRow_workout {
+  display: flex;
+  width: 33.3%;
+  justify-content: center;
+}
+
+.userRow_workout_dates div {
+  display: flex;
+}
+
+.userRow_steps .CircularProgressbar {
+  width: 70px;
+  height: 70px;
+}
+
+.userRow_steps>div {
+  width: fit-content;
+  padding: 15px 8% 15px 0px;
+  max-height: 100px;
+  align-self: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.userRow_steps #button,
+.userRow_incr_decr #button {
+  display: block;
+  height: 20px;
+  width: 100%;
+  padding: 1px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#button:hover {
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.userRow_workout>div {
+  padding-right: 8%;
+}
+
+.userRow_workout_dates {
+  padding: 0px 0px;
+}
+
+.userRow_workout_dates div {
+  height: 30px;
+  font-size: 1.2em;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+
+.userRow_workout_dates svg {
+  padding: 0px 8px 5px 0px;
+  font-size: 1.4em !important;
+  align-self: self-start;
+}
+
+.userRow_nutrition div {
+  width: fit-content;
+  align-self: center;
+  padding-right: 10%;
+  text-align: center;
+}
+
+.userRow_last div {
+  background: #36F5C7;
+  width: fit-content;
+  align-self: center;
+  padding: 10px 8%;
+  border-radius: 9px;
+  color: #000000;
+  font-size: 1.4rem;
+  margin-left: auto;
+}
+
+.userRow_last div svg {
+  stroke-width: 0.4;
+}
+
+.userRow_workout {
+  padding: 15px 0px;
+}
+
+#piechart svg {
+  width: 70px !important;
+  height: 70px !important;
+  cursor: default;
+}
+
+#button {
+  background: #101317;
+  height: 70px;
+  width: fit-content;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0px 3%;
+  border-radius: 9px;
 }
 
-.App-link {
-  color: #61dafb;
+#button svg {
+  align-self: center;
+  height: 100%;
+  color: #ffffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#padding-vertical {
+  padding: 3px 0px;
+  font-weight: 700;
+}
+
+#progress_bar {
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+.tooltip {
+  background-color: #333B44;
+  width: 250px;
+  border-radius: 8px;
+}
+
+.tooltip text {
+  padding: 0px 1px;
+  font-size: 0.9em;
+}
+
+.tooltip_quantity {
+  background-color: #1B222A;
+  padding: 8px;
+  border-radius: 7px;
+  margin: 10px 0px;
+}
+
+.tooltip_quantity #flex {
+  flex-direction: row;
+}
+
+.tooltip_quantity #flex div {
+  width: 50%;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+#progress {
+  display: flex;
+  background-color: #101317;
+  margin: 10px 0px 0px;
+}
+
+#progress div,
+#progress {
+  height: 10px;
+  border-radius: 4px;
+}
+
+#align_right {
+  text-align: right;
+}
+
+
+@media (max-width:930px) {
+  .App .userRow {
+    max-height: 500px;
+    flex-direction: column;
+    font-size: 1em;
   }
-  to {
-    transform: rotate(360deg);
+
+  .userRow .userRow_profile {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .container_menu_leftMargin {
+    margin-left: 0px;
+  }
+
+  .container_menu div {
+    width: 33.3%;
+    font-size: 1em;
+  }
+
+  #full_width_sm {
+    width: 100% !important;
+  }
+
+  .userRow #full_width_sm div {
+    font-size: 1em;
+    font-weight: 400;
+  }
+
+  .userRow_steps,
+  .userRow_nutrition,
+  .userRow_workout {
+    width: 33.3%;
+  }
+
+  .userRow_steps .CircularProgressbar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .App .userRow #progress_bar {
+    font-size: 0.6em;
+  }
+
+  .userRow_workout {
+    padding: 27px 0px;
+  }
+
+  #piechart svg {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .userRow .userRow_last {
+    width: 100%;
+  }
+
+  .userRow .userRow_last div {
+    margin: 0px auto 10px;
+    padding: 5px 4%;
   }
 }
